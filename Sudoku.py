@@ -9,8 +9,7 @@ def Board_gen(root):
     f = open('Sudoku.txt')
     text = f.read().splitlines()  # Reading the file and splitting into seperate lines.
 
-    # board_num = 'Grid ' + str(randint(1, 50))  # Choosing a random board
-    board_num = 'Grid ' + '5'
+    board_num = 'Grid ' + str(randint(1, 50))  # Choosing a random board
 
     for i, line in enumerate(text):
         if board_num == line:
@@ -25,7 +24,7 @@ def Board_gen(root):
                 char_board[i][j] = '_'  # Converting the blank spaces into _
     f.close()
 
-    # Now we have te board in a 2d character list. We need to put it into a 2d Entry-widget list..
+    # Now we have the board in a 2d character list. We need to put it into a 2d Entry-widget list..
 
     entry_board = []
     board_values = []
